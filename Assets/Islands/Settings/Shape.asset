@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0265e3026b4d8a847aac26987d644066, type: 3}
+  m_Name: Shape
+  m_EditorClassIdentifier: 
+  islandRadius: 0.85
+  noiseLayers:
+  - enabled: 1
+    useFirstLayerAsMask: 0
+    noiseSettings:
+      strength: -0.4
+      numLayers: 2
+      persistence: 0.22
+      roughness: 7.9
+      baseRoughness: 0.38
+      center: {x: 13.14, y: 0, z: 0}
+      minValue: 0
+  - enabled: 0
+    useFirstLayerAsMask: 1
+    noiseSettings:
+      strength: 4.51
+      numLayers: 2
+      persistence: 0.249
+      roughness: 10.19
+      baseRoughness: 2.77
+      center: {x: 6.78, y: 0, z: 0}
+      minValue: 0.74
+  faceEnable: 000001010101

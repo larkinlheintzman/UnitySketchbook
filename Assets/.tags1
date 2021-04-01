@@ -1,0 +1,10 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+destructContact	C:\Users\Larkin\3dgam\Assets\destructContact.cs	/^public class destructContact : MonoBehaviour$/;"	class	line:5
+Start	C:\Users\Larkin\3dgam\Assets\destructContact.cs	/^    void Start()$/;"	method	line:9	class:destructContact	file:	signature:()
+Update	C:\Users\Larkin\3dgam\Assets\destructContact.cs	/^    void Update()$/;"	method	line:15	class:destructContact	file:	signature:()
+OnCollisionEnter	C:\Users\Larkin\3dgam\Assets\destructContact.cs	/^    void OnCollisionEnter(Collision col){$/;"	method	line:20	class:destructContact	file:	signature:(Collision col)

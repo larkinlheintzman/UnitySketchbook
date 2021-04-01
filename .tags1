@@ -1,0 +1,44 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+triggerController	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^public class triggerController : MonoBehaviour$/;"	class	line:5
+animator	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  Animator animator;$/;"	field	line:8	class:triggerController	file:
+rigidbody	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  new Rigidbody rigidbody;$/;"	field	line:9	class:triggerController	file:
+input	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  DudeActions input;$/;"	field	line:10	class:triggerController	file:
+RecoveryTable	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  Hashtable RecoveryTable = new Hashtable();$/;"	field	line:12	class:triggerController	file:
+RecoveryCounts	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  Hashtable RecoveryCounts = new Hashtable();$/;"	field	line:13	class:triggerController	file:
+AnimationSet	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  string[] AnimationSet = {"Walking", "Running", "Idle"};$/;"	field	line:14	class:triggerController	file:
+currentMovement	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  Vector3 currentMovement;$/;"	field	line:16	class:triggerController	file:
+currentPosition	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  Vector3 currentPosition;$/;"	field	line:17	class:triggerController	file:
+movementPressed	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  bool movementPressed;$/;"	field	line:20	class:triggerController	file:
+runPressed	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  bool runPressed = false;$/;"	field	line:21	class:triggerController	file:
+rollPressed	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  bool rollPressed = false;$/;"	field	line:22	class:triggerController	file:
+punchPressed	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  bool punchPressed = false;$/;"	field	line:23	class:triggerController	file:
+ragdollPressed	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  bool ragdollPressed = false;$/;"	field	line:24	class:triggerController	file:
+jumpPressed	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  bool jumpPressed = false;$/;"	field	line:25	class:triggerController	file:
+rollEndTime	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  float rollEndTime;$/;"	field	line:28	class:triggerController	file:
+walkEndTime	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  float walkEndTime;$/;"	field	line:29	class:triggerController	file:
+punchEndTime	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  float punchEndTime;$/;"	field	line:30	class:triggerController	file:
+altPunchEndTime	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  float altPunchEndTime;$/;"	field	line:31	class:triggerController	file:
+ragdollEndTime	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  float ragdollEndTime;$/;"	field	line:32	class:triggerController	file:
+jumpEndTime	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  float jumpEndTime;$/;"	field	line:33	class:triggerController	file:
+playerSpeedMult	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  public float playerSpeedMult = 7.0f;$/;"	field	line:40	class:triggerController
+playerRunMult	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  public float playerRunMult = 1.5f;$/;"	field	line:42	class:triggerController
+playerMaxSpeed	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  public float playerMaxSpeed = 5.0f; \/\/ player ground speed max$/;"	field	line:44	class:triggerController
+playerRotationSpeed	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  public float playerRotationSpeed = 0.1f;$/;"	field	line:46	class:triggerController
+hitDetected	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  [HideInInspector] public bool hitDetected = false;$/;"	field	line:49	class:triggerController
+hitTarget	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  [HideInInspector] public GameObject hitTarget = null;$/;"	field	line:50	class:triggerController
+ragdollControl	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  ragdollControl ragdollControl;$/;"	field	line:53	class:triggerController	file:
+motionController	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  motionController motionController;$/;"	field	line:54	class:triggerController	file:
+animationClipDict	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  private Dictionary<string, AnimationClip> animationClipDict = new Dictionary<string, AnimationClip>();$/;"	field	line:56	class:triggerController	file:
+Awake	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^    void Awake()$/;"	method	line:59	class:triggerController	file:	signature:()
+Start	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  void Start()$/;"	method	line:140	class:triggerController	file:	signature:()
+UpdateActionTimes	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^  public void UpdateActionTimes()$/;"	method	line:161	class:triggerController	signature:()
+CheckRecoveryTable	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^    private bool CheckRecoveryTable(string key)$/;"	method	line:212	class:triggerController	file:	signature:(string key)
+UpdateRecoveryTimes	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^    private void UpdateRecoveryTimes()$/;"	method	line:219	class:triggerController	file:	signature:()
+FixedUpdate	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^    void FixedUpdate()$/;"	method	line:236	class:triggerController	file:	signature:()
+OnEnable	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^    void OnEnable ()$/;"	method	line:349	class:triggerController	file:	signature:()
+OnDisable	C:\Users\Larkin\3dgam\Assets\CharacterControllers\triggerController.cs	/^    void OnDisable ()$/;"	method	line:354	class:triggerController	file:	signature:()
