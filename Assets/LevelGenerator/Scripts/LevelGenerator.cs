@@ -62,6 +62,11 @@ namespace LevelGenerator.Scripts
     /// Special section rules, limits and forces the amount of a specific tag
     /// </summary>
     public TagRule[] SpecialRules;
+    
+    /// <summary>
+    /// sdf to control section generation TODO
+    /// </summary>
+    public TagRule[] SpecialRules;
 
     protected List<Section> registeredSections = new List<Section>();
     protected List<DeadEnd> registeredDeadEnds = new List<DeadEnd>();
@@ -128,15 +133,10 @@ namespace LevelGenerator.Scripts
     public void Cleanup()
     {
 
-      // updateFlag = false;
-      // cleaningFlag = true;
-      // while (registeredSections.Count > 0)
-      // {
         foreach (Section child in registeredSections)
         {
           if (child)
           {
-            // Debug.Log("destroying child " + child);
             GameObject.DestroyImmediate(child.gameObject);
           }
         }
@@ -144,38 +144,13 @@ namespace LevelGenerator.Scripts
         {
           if (child)
           {
-            // Debug.Log("destroying child " + child);
             GameObject.DestroyImmediate(child.gameObject);
           }
         }
-        // Debug.Log("Container empty iteration, current length: " + registeredSections.Count);
-      // }
 
-
-      // foreach (Collider deadEndCollider in DeadEndColliders)
-      // {
-      //   GameObject.DestroyImmediate(deadEndCollider.gameObject);
-      // }
-
-      // public Transform Container => SectionContainer != null ? SectionContainer : transform;
       registeredSections = new List<Section>();
-      // protected IEnumerable<Collider> RegisteredColliders => registeredSections.SelectMany(s => s.Bounds.Colliders).Union(DeadEndColliders);
       DeadEndColliders = new List<Collider>();
-
-      // updateFlag = true;
-      // cleaningFlag = false;
     }
-
-    // protected void Update()
-    // {
-    //
-    //   if (updateFlag)
-    //   {
-    //
-    //     Debug.Log("level updated");
-    //   }
-    //
-    // }
 
     protected void CheckRuleIntegrity()
     {
@@ -241,7 +216,7 @@ namespace LevelGenerator.Scripts
         {
           if (tags.Contains(rule.Tag))
           {
-            return Sections.Where(x => x.Tags.Contains(rule.Tag)).PickOne();
+            return Sections.Where(x => (x.Tags.Contains(rule.Tag))).PickOne();
           }
         }
       }
@@ -249,6 +224,8 @@ namespace LevelGenerator.Scripts
       var pickedTag = PickFromExcludedTags(tags);
       return Sections.Where(x => x.Tags.Contains(pickedTag)).PickOne();
     }
+    
+    public bool CheckBounds(Section 
 
     protected string PickFromExcludedTags(string[] tags)
     {

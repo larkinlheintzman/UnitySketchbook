@@ -30,6 +30,12 @@ namespace LevelGenerator.Scripts
         /// Chances of the section spawning a dead end
         /// </summary>
         public int DeadEndChance;
+        
+        /// <summary>
+        /// Chances of the section spawning a dead end
+        /// </summary> TODO fix me pls
+        
+        torusShape
 
         /// <summary>
         /// parents scale
@@ -98,6 +104,19 @@ namespace LevelGenerator.Scripts
           newDeadEnd.transform.localScale = Vector3.one;
           Instantiate(newDeadEnd, exit).Initialize(LevelGenerator);
         }
+        
+            
+        float sdTorus( Vector3 p, Vector2 t )
+        {
+            vec2 q = vec2(length(p.xz)-t.x,p.y);
+            return length(q)-t.y;
+        }
+    
+        bool SDFScaling(Exit exit)
+        {
+        return sdTorus(exit.transform.position - levelGenerator.transform.position, torusShape); 
+        }
+        
 
         protected bool IsAdvancedExit(Transform exit) => exit.GetComponent<AdvancedExit>() != null;
 
