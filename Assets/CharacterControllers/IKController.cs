@@ -28,10 +28,10 @@ public class IKController : MonoBehaviour
   public bool duckEnabled = false;
   public float duckPercentage = 0.0f;
   public float groundOffset = 0.25f;
+  public float groundedTolerance = 0.1f;
   [SerializeField, Range(2,2)]
   public int legNumber = 2;
 
-  private float groundedTolerance = 0.1f;
   private float leftStepProgress = 0.0f;
   private float rightStepProgress = 0.0f;
 
@@ -103,9 +103,17 @@ public class IKController : MonoBehaviour
 
   Vector3 AirPosition(Vector3 refPosition)
   {
-    // stepPeriod = 0.01f * stepPeriodMax;
-    // Debug.Log("air step period set to: " + stepPeriod);
-    return refPosition - transform.up*(legLength/2f);
+    Vector3 vel = motionController.rigidbody.velocity;
+    Vector3 horizontalSpeed = new Vector3(vel.x, 0.0f, vel.z);
+    if (vel.y >= 0)
+    {
+      // going up so tilt towards velocity vec
+      return transform.position + transform.TransformVector(refPosition) - transform.up*(legLength*Mathf.Clamp(vel.y/2.0f, 0.5f, 1f)) - horizontalSpeed*0.5f;
+    }
+    else
+    {
+      return transform.position + transform.TransformVector(refPosition) - transform.up*(legLength*Mathf.Clamp(vel.y/2.0f, 0.5f, 1f)) + horizontalSpeed*0.5f;
+    }
   }
 
   LegPosition FindGround(Vector3 legCenterOffset)
@@ -122,6 +130,8 @@ public class IKController : MonoBehaviour
       outputPosition.worldPosition = groundPosition;
       outputPosition.isGrounded = true;
 
+      Debug.DrawLine(transform.position + localOffset, groundPosition, Color.green, 0.5f);
+
       return outputPosition;
 
     }
@@ -132,7 +142,7 @@ public class IKController : MonoBehaviour
 
   void FootUpdate(int footIndex)
   {
-    if (!CheckStepping() && CheckNeedStep(targetArray[footIndex], boneArray[footIndex], legCenterArray[footIndex]))
+    if (!CheckStepping() && CheckNeedStep(footIndex))
     {
 
       LegPosition legPosition = FindGround(legCenterArray[footIndex]);
@@ -155,6 +165,16 @@ public class IKController : MonoBehaviour
         stepProgressArray[footIndex] = 0.0f;
       }
     }
+    // check flying foot
+    // else if (!FootGrounded(targetArray[footIndex].position))
+    else if (!FootGrounded(boneArray[footIndex].position) && !CheckStepping())
+    {
+      // things go here
+      // Debug.Log("air foot " + footIndex + " positioning");
+      targetArray[footIndex].position = AirPosition(legCenterArray[footIndex]);
+
+    }
+
   }
 
   // Update is called once per frame
@@ -167,13 +187,25 @@ public class IKController : MonoBehaviour
   }
 
 
-  bool CheckNeedStep(Transform target, Transform bone, Vector3 legCenterOffset)
+  bool CheckNeedStep(int footIndex)
   {
+    Transform target = targetArray[footIndex];
+    Transform bone = boneArray[footIndex];
+    Vector3 legCenterOffset = legCenterArray[footIndex];
+
     if (Vector3.ProjectOnPlane(target.position - transform.position, transform.up).magnitude >= stepRadius)
     {
       // Debug.DrawLine(target.position, target.position + Vector3.ProjectOnPlane(target.position - transform.position, transform.up));
+      Debug.Log("moving foot due to distance");
       return true;
     }
+    // also check vertical but differently
+    // if (Vector3.Project(target.position, -transform.up).magnitude >= legLength)
+    // {
+    //   // Debug.DrawLine(target.position, target.position + Vector3.ProjectOnPlane(target.position - transform.position, transform.up));
+    //   Debug.Log("moving foot due to height");
+    //   return true;
+    // }
 
     // if feet are on wrong side of body lol
     Vector3 localOffset = transform.TransformVector(legCenterOffset);
@@ -190,6 +222,7 @@ public class IKController : MonoBehaviour
   {
     if (Physics.Raycast(targetPosition, -transform.up, groundedTolerance + groundOffset, layerMask))
     {
+      Debug.DrawLine(targetPosition, targetPosition + transform.up, Color.red, 0.5f);
       return true;
     }
     return false;

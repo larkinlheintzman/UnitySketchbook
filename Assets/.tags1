@@ -4,7 +4,50 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-destructContact	C:\Users\Larkin\3dgam\Assets\destructContact.cs	/^public class destructContact : MonoBehaviour$/;"	class	line:5
-Start	C:\Users\Larkin\3dgam\Assets\destructContact.cs	/^    void Start()$/;"	method	line:9	class:destructContact	file:	signature:()
-Update	C:\Users\Larkin\3dgam\Assets\destructContact.cs	/^    void Update()$/;"	method	line:15	class:destructContact	file:	signature:()
-OnCollisionEnter	C:\Users\Larkin\3dgam\Assets\destructContact.cs	/^    void OnCollisionEnter(Collision col){$/;"	method	line:20	class:destructContact	file:	signature:(Collision col)
+IKController	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^public class IKController : MonoBehaviour$/;"	class	line:5
+leftLegTarget	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  public Transform leftLegTarget;$/;"	field	line:8	class:IKController
+rightLegTarget	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  public Transform rightLegTarget;$/;"	field	line:10	class:IKController
+newLeftPosition	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  private Vector3 newLeftPosition;$/;"	field	line:12	class:IKController	file:
+newRightPosition	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  private Vector3 newRightPosition;$/;"	field	line:13	class:IKController	file:
+motionController	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  private IKMotionController motionController;$/;"	field	line:15	class:IKController	file:
+layerMask	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  public LayerMask layerMask;$/;"	field	line:17	class:IKController
+rightFootBone	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  public Transform rightFootBone;$/;"	field	line:18	class:IKController
+leftFootBone	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  public Transform leftFootBone;$/;"	field	line:19	class:IKController
+stepDistance	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  public float stepDistance = 0.75f; \/\/ distance to move in front of root$/;"	field	line:21	class:IKController
+stepRadius	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  public float stepRadius = 4;$/;"	field	line:22	class:IKController
+standHeight	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  public float standHeight = 1.0f;$/;"	field	line:23	class:IKController
+legLength	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  public float legLength = 3f;$/;"	field	line:24	class:IKController
+hipWidth	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  public float hipWidth = 1.0f;$/;"	field	line:25	class:IKController
+stepHeight	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  public float stepHeight = 0.25f;$/;"	field	line:26	class:IKController
+stepPeriodMax	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  public float stepPeriodMax = 0.5f;$/;"	field	line:27	class:IKController
+duckEnabled	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  public bool duckEnabled = false;$/;"	field	line:28	class:IKController
+duckPercentage	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  public float duckPercentage = 0.0f;$/;"	field	line:29	class:IKController
+groundOffset	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  public float groundOffset = 0.25f;$/;"	field	line:30	class:IKController
+groundedTolerance	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  public float groundedTolerance = 0.1f;$/;"	field	line:31	class:IKController
+legNumber	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  public int legNumber = 2;$/;"	field	line:33	class:IKController
+leftStepProgress	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  private float leftStepProgress = 0.0f;$/;"	field	line:35	class:IKController	file:
+rightStepProgress	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  private float rightStepProgress = 0.0f;$/;"	field	line:36	class:IKController	file:
+leftStepping	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  private bool leftStepping = false;$/;"	field	line:38	class:IKController	file:
+rightStepping	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  private bool rightStepping = false;$/;"	field	line:39	class:IKController	file:
+stepPeriod	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  private float stepPeriod;$/;"	field	line:40	class:IKController	file:
+targetArray	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  private Transform[] targetArray;$/;"	field	line:43	class:IKController	file:
+boneArray	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  private Transform[] boneArray;$/;"	field	line:44	class:IKController	file:
+newPositionArray	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  private Vector3[] newPositionArray;$/;"	field	line:45	class:IKController	file:
+legCenterArray	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  private Vector3[] legCenterArray;$/;"	field	line:46	class:IKController	file:
+isSteppingArray	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  private bool[] isSteppingArray;$/;"	field	line:47	class:IKController	file:
+stepProgressArray	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  private float[] stepProgressArray;$/;"	field	line:48	class:IKController	file:
+leftLegIndex	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  private int leftLegIndex = 0;$/;"	field	line:50	class:IKController	file:
+rightLegIndex	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  private int rightLegIndex = 1;$/;"	field	line:51	class:IKController	file:
+LegPosition	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  struct LegPosition$/;"	struct	line:53	class:IKController
+worldPosition	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^    public Vector3 worldPosition;$/;"	field	line:55	struct:IKController.LegPosition
+isGrounded	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^    public bool isGrounded;$/;"	field	line:56	struct:IKController.LegPosition
+Start	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  void Start()$/;"	method	line:60	class:IKController	file:	signature:()
+AirPosition	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  Vector3 AirPosition(Vector3 refPosition)$/;"	method	line:104	class:IKController	file:	signature:(Vector3 refPosition)
+FindGround	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  LegPosition FindGround(Vector3 legCenterOffset)$/;"	method	line:119	class:IKController	file:	signature:(Vector3 legCenterOffset)
+FootUpdate	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  void FootUpdate(int footIndex)$/;"	method	line:143	class:IKController	file:	signature:(int footIndex)
+Update	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  void Update()$/;"	method	line:181	class:IKController	file:	signature:()
+CheckNeedStep	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  bool CheckNeedStep(int footIndex)$/;"	method	line:190	class:IKController	file:	signature:(int footIndex)
+FootGrounded	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  bool FootGrounded(Vector3 targetPosition)$/;"	method	line:221	class:IKController	file:	signature:(Vector3 targetPosition)
+AngleToes	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  void AngleToes(Transform target, Transform bone)$/;"	method	line:231	class:IKController	file:	signature:(Transform target, Transform bone)
+CheckStepping	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  bool CheckStepping()$/;"	method	line:238	class:IKController	file:	signature:()
+SampleParabola	C:\Users\Larkin\3dgam\Assets\CharacterControllers\IKController.cs	/^  Vector3 SampleParabola(Vector3 start, Vector3 end, float height, float t, Vector3 outDirection)$/;"	method	line:250	class:IKController	file:	signature:(Vector3 start, Vector3 end, float height, float t, Vector3 outDirection)
